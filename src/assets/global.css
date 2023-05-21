@@ -92,3 +92,54 @@ html, body {
     grid-template-rows: auto 1fr auto;
     min-height: 100%;
 }
+
+a {
+    text-decoration: none;
+}
+
+a > h1 {
+    height: 100%;
+    padding: 0 0 0 4rem;
+    font-size: clamp(3rem, 4.5vw, 5rem);
+}
+
+a > h1, .nav-item {
+    display: grid;
+    place-items: center;
+    font-size: clamp(3rem, 4.5vw, 5rem);
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.navigation-container > nav {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-item {
+    position: relative;
+    min-height: 9rem;
+    width: clamp(4rem, 100%, 8rem);
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+}
+
+.nav-item:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 70%;
+    background-color: blue;
+    height: 4px;
+    width: 0;
+    transition: width 0.15s ease-in-out;
+}
+
+.nav-item.active:after {
+    width: 100%;
+    transition: width 0.25s ease-in-out;
+}
