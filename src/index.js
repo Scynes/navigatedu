@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 
-import './assets/index.css'
+import './assets/global.css'
 
 const ROOT = ReactDOM.createRoot(document.getElementById('root'));
 
