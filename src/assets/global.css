@@ -12,6 +12,7 @@ html {
 
 html, body {
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ---------- *
@@ -89,11 +90,14 @@ html, body {
  * --------------- */
 #root {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     min-height: 100%;
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 2.25rem 10rem;
@@ -114,10 +118,13 @@ a {
     color: black;
 }
 
+span.bold {
+    text-decoration: solid;
+}
+
 .navigation-container {
     display: flex;
     justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -159,7 +166,7 @@ a {
     gap: 4rem;
 }
 
-.go-learn {
+.go-learn, .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +176,7 @@ a {
 .go-learn-image {
     background-image: url('./images/home-bg.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain, 10%;
 }
 
 .go-learn > .description {
@@ -186,12 +193,12 @@ a {
     color: white;
 }
 
-.go-learn > .description > h1 {
+.go-learn > .description > h1, .about h1 {
     font-size: clamp(3rem, 3.5vw, 5rem);
 }
 
-.go-learn > .description > p {
-    font-size: clamp(1rem, 2.5vw, 2.5rem);
+.go-learn > .description > p, .about p {
+    font-size: clamp(1.7rem, 2.5vw, 2.25rem);
     max-width: 50rem;
 }
 
@@ -202,7 +209,44 @@ a {
     background-position: center;
 }
 
-.landing-container {
+.landing-container, .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.about {
+    gap: 6rem;
+}
+
+.about-bg {
+    background-image: url('./images/about-bg.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.domain-girl {
+    background-image: url('./images/about-domain-girl.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+@media (max-width: 700px) {
+
+    .landing-container, .about-container {
+        grid-template-columns: auto;
+    }
+
+    .domain-girl {
+        display: none;
+    }
+
+    .about-bg {
+        background-size: contain;
+    }
+
+    .about {
+        padding: 0 10rem;
+    }
 }
