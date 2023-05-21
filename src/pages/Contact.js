@@ -3,7 +3,7 @@ import PageTransition from "../components/PageTransition";
 const Contact = () => {
     return (
         <PageTransition>
-            <div className="contact-container">
+            <div className="contact-container contact-bg">
                 <h1>Send us a Message!</h1>
                 <form action="" className="contact-form">
                     <label htmlFor="name">Name</label>
