@@ -220,7 +220,7 @@ span.bold {
 
 .about-bg {
     background-image: url('./images/about-bg.svg');
-    background-size: 80%;
+    background-size: clamp(30rem, 100%, 70rem);
     background-repeat: no-repeat;
     background-position: bottom left;
 }

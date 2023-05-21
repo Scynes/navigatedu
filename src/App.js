@@ -4,6 +4,7 @@ import NavigationBar from "./components/navigation";
 import Footer from "./components/footer";
 import Landing from "./pages/Landing";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={ <Landing /> } />
                     <Route path="/about" element={ <About /> } />
+                    <Route path="/contact" element={ <Contact /> } />
                 </Routes>
             </main>
             <Footer />
