@@ -280,6 +280,19 @@ span.bold {
     margin-bottom: 1rem;
 }
 
+.glossary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.glossary-bg {
+    background-image: url(./images/glossary/back-button-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: clamp(40rem, 100%, 65rem);
+}
+
 @media (max-width: 700px) {
 
     .landing-container, .about-container {
