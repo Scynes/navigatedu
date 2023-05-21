@@ -1,6 +1,14 @@
 const Footer = () => {
     return (
-        <h1>Footer</h1>
+        <footer>
+            <section className="copyright">
+                <p>© 2023 navigatedu. All rights reserved.</p>
+            </section>
+            <section className="terms">
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+            </section>
+        </footer>
     );
 }
 

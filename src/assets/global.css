@@ -93,8 +93,10 @@ html, body {
     min-height: 100%;
 }
 
-a {
-    text-decoration: none;
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.25rem 10rem;
 }
 
 a > h1 {
@@ -103,10 +105,13 @@ a > h1 {
     font-size: clamp(3rem, 4.5vw, 5rem);
 }
 
-a > h1, .nav-item {
+a {
     display: grid;
     place-items: center;
+    text-decoration: none;
+    line-height: 1.7;
     font-size: clamp(3rem, 4.5vw, 5rem);
+    color: black;
 }
 
 .navigation-container {
@@ -133,7 +138,7 @@ a > h1, .nav-item {
     position: absolute;
     bottom: 0;
     top: 70%;
-    background-color: blue;
+    background-color: #3476EF;
     height: 4px;
     width: 0;
     transition: width 0.15s ease-in-out;
@@ -142,4 +147,14 @@ a > h1, .nav-item {
 .nav-item.active:after {
     width: 100%;
     transition: width 0.25s ease-in-out;
+}
+
+.copyright, .terms {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.terms {
+    display: flex;
+    gap: 4rem;
 }

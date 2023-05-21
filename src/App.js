@@ -17,9 +17,7 @@ const App = () => {
                     </Route>
                 </Routes>
             </main>
-            <footer>
-                <Footer />
-            </footer>
+            <Footer />
         </BrowserRouter>
     );
 }
